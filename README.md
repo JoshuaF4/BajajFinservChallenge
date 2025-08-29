@@ -5,8 +5,7 @@ This is a headless **Spring Boot application** that:
 1. On startup, sends a `POST` request to the **generateWebhook** API with candidate details.  
 2. Receives a `webhook` URL and an `accessToken` (JWT).  
 3. Selects the SQL query based on the last two digits of the registration number.  
-   - **Even RegNo → Question 2** (implemented here for `22BIT0082`)  
-   - **Odd RegNo → Question 1** (placeholder in code, can be filled if needed)  
+   - **Even RegNo → Question 2** (implemented here for `22BIT0082`)  )  
 4. Saves the SQL query to `build/solution-final.sql`.  
 5. Submits the final SQL query to the `testWebhook` URL using the JWT token in the **Authorization** header (token used as-is, no `Bearer ` prefix).  
 
