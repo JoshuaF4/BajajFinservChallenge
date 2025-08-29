@@ -1,0 +1,17 @@
+app:
+  candidate:
+    name: "Joshua Daniel Rajan"
+    regNo: "22BIT0082"
+    email: "joshuadaniel.rajan2022@vitstudent.ac.in"
+
+  endpoints:
+    generate: "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA"
+    submit:   "https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA"
+
+  storage:
+    outDir: "build"
+    outFile: "solution-final.sql"
+
+logging:
+  level:
+    root: INFO
