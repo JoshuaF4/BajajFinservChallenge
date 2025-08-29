@@ -1,0 +1,5 @@
+com\example\webhooksql\util\FileStore.class
+com\example\webhooksql\logic\SqlChooser.class
+com\example\webhooksql\client\HiringApiClient.class
+com\example\webhooksql\dto\WebhookResponse.class
+com\example\webhooksql\App.class

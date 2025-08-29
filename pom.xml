@@ -8,6 +8,9 @@
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
+  <name>webhook-sql</name>
+  <description>Spring Boot app to fetch webhook, solve SQL, and submit answer</description>
+
   <properties>
     <java.version>17</java.version>
     <spring.boot.version>3.3.2</spring.boot.version>
@@ -26,16 +29,19 @@
   </dependencyManagement>
 
   <dependencies>
+    <!-- Core Spring Boot -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
     </dependency>
 
+    <!-- REST client -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <!-- JSON -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
@@ -44,10 +50,24 @@
 
   <build>
     <plugins>
+      <!-- Spring Boot plugin to build an executable fat JAR -->
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${spring.boot.version}</version>
+        <configuration>
+          <!-- Your main Spring Boot class -->
+          <mainClass>com.example.webhooksql.App</mainClass>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
+
 </project>
